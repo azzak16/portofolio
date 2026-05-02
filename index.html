@@ -687,7 +687,7 @@ footer{
    RESPONSIVE
 ════════════════════════════════════════════ */
 @media(max-width:1060px){
-  .hero-code{display:none}
+  /* .hero-code{display:none} */
   .sk-grid,.te-grid,.svc-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:800px){
@@ -702,8 +702,18 @@ footer{
   .pj-card.wide{grid-column:span 1}
   .sk-grid,.te-grid,.svc-grid{grid-template-columns:1fr}
   footer{padding:26px 22px}
-  .hero-name{font-size:clamp(2.8rem,13vw,5rem)}
+  .hero-name{font-size:clamp(1.9rem,9.5vw,4rem);letter-spacing:-.02em}
   #btt{bottom:88px}
+
+  .hero-code{
+    position:static;
+    transform:none;
+    margin-top:32px;
+    max-width:100%;
+    opacity:.85;
+    font-size:.6rem;
+    padding:16px 18px;
+  }
 }
 </style>
 </head>
