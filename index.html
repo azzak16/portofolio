@@ -702,7 +702,7 @@ footer{
   .pj-card.wide{grid-column:span 1}
   .sk-grid,.te-grid,.svc-grid{grid-template-columns:1fr}
   footer{padding:26px 22px}
-  .hero-name{font-size:clamp(1.9rem,9.5vw,4rem);letter-spacing:-.02em}
+  .hero-name{font-size:clamp(1.9rem,9.5vw,2rem);letter-spacing:-.02em}
   #btt{bottom:88px}
 
   .hero-code{
@@ -738,7 +738,8 @@ footer{
 <canvas id="bg-canvas"></canvas>
 
 <!-- FLOATING BUTTONS -->
-<button id="btt" aria-label="Back to top" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+<!-- <button id="btt" aria-label="Back to top" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button> -->
+<button id="btt" aria-label="Back to top">↑</button>
 <a id="wa-btn" href="https://wa.me/6285648540552" target="_blank" aria-label="WhatsApp">💬</a>
 
 <!-- ══ NAV ══ -->
@@ -788,7 +789,7 @@ footer{
       <div class="badge"><span class="bdot" style="background:var(--violet)"></span>5+ Years Experience</div>
     </div>
     <h1 class="hero-name">
-      <div>ANGGA</div>
+      <div>ANGGA Z.</div>
       <div class="outline">DEVELOPER.</div>
     </h1>
     <p class="hero-sub">Full-Stack Engineer · CCTV Specialist · Network Builder</p>
@@ -1350,6 +1351,12 @@ let frame=0;
 
 /* ── SCROLL ── */
 const prog=document.getElementById('prog'),nav=document.getElementById('nav'),btt=document.getElementById('btt');
+
+btt.addEventListener('click', function(e){
+  e.stopPropagation();
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+
 window.addEventListener('scroll',()=>{
   const sp=scrollY/(document.body.scrollHeight-innerHeight);
   prog.style.width=(sp*100)+'%';
